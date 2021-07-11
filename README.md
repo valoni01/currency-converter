@@ -1,6 +1,23 @@
 # Currcalculator
 
+##Disclaimer! ##Disclaimer!!
+
+* Access the link without the https (this is because we are using the free version of the API)
+  http://cu-converter.herokuapp.com/
+
+* Only A few of the currencies works because of the API restriction.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
+
+# Functional Req.
+
+* selected base currency and a target currency, got the rate and converted to the actual value. Wrote a custome pipe to handle this conversion
+
+# Additional Req.
+* convert currencies by date
+* display a tabular form of common popular or stronger currencies
+* unite testing
+* ngrx component store impelementation
 
 ## Development server
 
