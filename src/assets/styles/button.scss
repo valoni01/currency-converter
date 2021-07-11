@@ -1,0 +1,39 @@
+@import '../styles/variable.scss';
+
+
+.button{
+  cursor: pointer;
+  background-color:$pry-background-color;
+  text-align: center;
+}
+
+.button_default {
+  @extend .button;
+  width:100%;
+  padding: 10px;
+  color: $sec-color;
+  font-family: $font-family;
+  border-radius: 12px;
+  border-color: white;
+  font-size: 20px;
+}
+
+.button_headers {
+  @extend .button;
+  width:450px;
+  font-size: 20px;
+  padding: 15px;
+  // color:$default;
+  font-family: $font-family;
+  cursor: pointer;
+  border-color: yellow;
+  color:rgb(95, 89, 89);
+
+}
+
+.button_active{
+  @extend .button_headers;
+   background-color: lightgray;
+   color:black;
+   border-color:yellow
+}

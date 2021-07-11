@@ -1,0 +1,28 @@
+<table>
+  <tr>
+    <th>Symbol</th>
+    <th>Rate</th>
+    <th>Value</th>
+  </tr>
+  <tr *ngFor="let r of dataView.state!.rates | keyvalue">
+    <td>{{ r.key }}</td>
+    <td>{{ r.value }}</td>
+    <td id="blink">{{ r.value | converter: dataView.amount! }}</td>
+  </tr>
+</table>
+
+<div class="info">
+  <span id="info_descr">
+    {{ dataView.currenctBaseCurrency! }} to
+    {{ dataView.TargetCurrency }} Exchange Rate:
+    {{ dataView.state!.rates[dataView.TargetCurrency!] }}</span
+  >
+  <br />
+  <span id="info_result"
+    >Value: {{ dataView.currenctBaseCurrency! }}
+    {{
+      dataView.state!.rates[dataView.TargetCurrency!]
+        | converter: dataView.amount!
+    }}</span
+  >
+</div>

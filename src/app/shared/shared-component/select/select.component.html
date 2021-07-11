@@ -1,0 +1,5 @@
+<select  (change)="emitValue($event)"  [(value)]="c">
+  <option>Select</option>
+  <option  *ngFor="let val of select | keyvalue"  [value]="val.value">{{val.key}}</option>
+</select>
+

@@ -1,0 +1,12 @@
+@import "../../../assets/styles/form.scss";
+
+::ng-deep select {
+  width: 120px !important;
+}
+
+span {
+  padding: 20px;
+  font-size: 15px;
+}
+
+

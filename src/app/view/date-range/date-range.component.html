@@ -1,0 +1,29 @@
+<form [formGroup]="currencyForm" (submit)="convertByDate()">
+  <div class="input_style">
+    <app-input
+    [placeholder]="'Enter Amount'"
+    formControlName="amount"
+    ngDefaultControl
+  ></app-input>
+  </div>
+  <div class="input_style">
+    <input formControlName="date" type="date" />
+  </div>
+  <div class="formHolder">
+    <span>Base:</span
+    ><app-select
+      formControlName="base"
+      ngDefaultControl
+      [select]="ListOfCountries"
+    ></app-select>
+    <span>Target:</span
+    ><app-select
+      formControlName="symbols"
+      [select]="ListOfCountries"
+      ngDefaultControl
+    ></app-select>
+  </div>
+  <div class="formHolder">
+    <app-button>Convert</app-button>
+  </div>
+</form>
