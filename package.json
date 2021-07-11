@@ -3,11 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "heroku-postbuild": "ng build --prod"
+  },
+  "engines": {
+    "node": "14.15.3",
+    "npm": "6.14.9"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +26,9 @@
     "@angular/router": "~12.0.1",
     "@ngrx/component": "^12.2.0",
     "@ngrx/component-store": "^12.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"
